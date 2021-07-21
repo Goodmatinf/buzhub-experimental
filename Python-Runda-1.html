@@ -1,168 +1,89 @@
-
 <!DOCTYPE html>
-<html lang="pl">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>buzhub - Python - Runda 1 (in-out, if)</title>
-        <meta http-equiv="cleartype" content="on">
-        <meta name="msapplication-TileColor" content="#222222">
-        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,800' rel='stylesheet' type='text/css'>
-        <link rel="stylesheet" href="https://theme.webme.com/designs/flexible/css/style.css">
-<link rel="icon" href="res/bzh.png" type="image/x-icon">
-
-<script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@900&display=swap" rel="stylesheet"> 
-
-<meta property="og:title" content="buzhub - Python - Runda 1 (in-out, if)" />
+<html lang="en">
+<title>buzhub - Python - Runda 1 (in-out, if)</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="res/style.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+<link rel="icon" href="res/logo.png" type="image/x-icon">
 <style>
-.cc_container .cc_btn, .cc_container .cc_btn:visited {
-    background-color: rgb(255, 255, 255) !important;
-}
-.cc_container .cc_btn:hover, .cc_container .cc_btn:active {
-    background-color: rgb(255, 192, 29) !important;
-}
-
-/* originally "left: initial", but this is not supported by IE, and CookieConsent appears left instead of right */ 
-@media screen and (min-width: 500px) {
-.cc_container {
-    left: auto !important;
-}
-}
-
-
+body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
+body {font-size:16px;}
+.half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
+.half img:hover{opacity:1}
 </style>
+<body>
 
-<style>
-a:link {
-  color: white;
-  background-color: transparent;
-  text-decoration: none;
-}
-a:visited {
-  color: orange;
-  background-color: transparent;
-  text-decoration: none;
-}
-a:hover {
-  color: red;
-  background-color: transparent;
-  text-decoration: underline;
-}
-a:active {
-  color: yellow;
-  background-color: transparent;
-  text-decoration: underline;
-}
-</style>
+<!-- Sidebar/menu -->
+<nav class="sidebar red collapse top large padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
+  <a href="javascript:void(0)" onclick="buz_close()" class="button hide-large display-topleft text-black" style="width:100%;font-size:22px">Close Menu</a>
+  <div class="container">
+    <h3 class="padding-64 text-black"><b>Buzhub</b></h3>
+  </div>
+  <div class="bar-block">
+    <a href="index.html" onclick="buz_close()" class="bar-item button hover-white text-black">Strona Główna</a> 
+    <a href="Python-zadania.html" onclick="buz_close()" class="bar-item button hover-white text-black">Python - zadania</a> 
+    <a href="Python-spr.html" onclick="buz_close()" class="bar-item button hover-white text-black">Python - sprawdziany</a> 
+    <a href="#" onclick="buz_close()" class="bar-item button hover-white text-black">Calc</a> 
+    <a href="Kontakt.html" onclick="buz_close()" class="bar-item button hover-white text-black">Kontakt</a> 
+  </div>
+</nav>
 
-<style type="text/css">        
-        .header {
-        background-image: url('res/tlo2.png');
-    }
-       
-    body {
-        background-image: url('res/tlo1.png');
-    } 
-     
-    .title {
-      color: #FF0000;
-    }
-        .content {
-        width: 1024px;
-    }
-    .widgets {
-        width: 0px;
-    }
-</style>   
-    </head>
-    
-    <body>
-    
-<div class="containerMain">
-        <div class="container">
-            
-            <header class="header">
-                <h1 class="title"></h1>
-                
-                <nav class="nav clearfix">
-                    <ul>
+<!-- Top menu on small screens -->
+<header class="container top hide-large red xlarge padding">
+  <a href="javascript:void(0)" class="button red margin-right text-black" onclick="buz_open()">☰</a>
+  <span class="text-black">Buzhub</span>
+</header>
 
-<li id="checked_menu"><a href="index.html">Strona Główna</a>
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="overlay hide-large" onclick="buz_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
 
-</li>                   
+<!-- !PAGE CONTENT! -->
+<div class="main" style="margin-left:340px;margin-right:40px">
 
-<li class="navWithSubpages"><a href="Python-zadania.html">Python-zadania</a>
-
-<ul>
-                         
-<li><a href="Python-Runda-1.html">Runda 1 (in-out, if)</a></li>                            
-                     
-<li><a href="Python-Runda-2.html">Runda 2 ([ ], split, for)</a></li>
-
-<li><a href="Python-Runda-3.html">Runda 3 (for range)</a></li>      
-
-<li><a href="Python-Runda-4.html">Runda 4 (proste problemy)</a></li>   
-
-<li><a href="Python-Runda-M.html">Runda M - jak matura</a></li>       
-
-<li><a href="Python-Runda-geo.html">Wszyscy lubimy geometrię</a></li>               
-
-</ul>
-
-</li>                   
-
-<li class="navWithSubpages"><a href="Python-spr.html">Python-Sprawdziany</a>
-
-<ul>
-                         
-<li><a href="Python-spr6.html">Sprawdzian 6 - for range</a></li>                                                     
-
-</ul>                 
-
-<li><a href="Kontakt.html">Kontakt</a>
-</li>                   
-                    </ul>     
-                </nav>
-                                
-             
-            </header>
-            
-            <section class="content">
-            <h1>Python - Runda 1 (in-out, if)</h1>
-            <big>Tutaj znajdują si rozwiązania zadań z pierwszej rundy:</big><br /> 
-			<big><a href="a1a-odejmowanko.html" style="color:lime;">a1a - Odejmowanko &#10004;</a> </big></span><br />  
-			<big><a href="a1a2-wawrzynosek.html" style="color:lime;">a1a2 - Wawrzynowsek &#10004;</a> </big></span><br />    
-			<big><a href="a1b-kalkulator.html" style="color:lime;">a1b - Kalkulator &#10004;</a> </big></span><br />
-			<big><a href="a1c-tygodnie.html" style="color:lime;">a1c - Tygodnie &#10004;</a> </big></span><br />
-			<big><a href="a1d-kalkulatorIII.html" style="color:lime;">a1d - Kalkulator III &#10004;</a> </big></span><br />
-			<big><a href="a2a-wiekszy.html" style="color:lime;">a2a - Wiekszy &#10004;</a> </big></span><br />
-			<big><a href="a2b-minimum.html" style="color:lime;">a2b - Minimum &#10004;</a> </big></span><br />
-			<big><a href="a2c-mniejsza-odleglosc.html" style="color:lime;">a2c - Mniejsza odleglosc &#10004;</a> </big></span><br />    
-			<big><a href="a2d-czy-calkowita.html" style="color:lime;">a2d - Czy calkowita &#10004;</a> </big></span><br />
-			<big><a href="a2da-czy-nieparzysta.html" style="color:lime;">a2da - Czy nieparzysta &#10004;</a> </big></span><br />
-			<big><a href="a2e-dwa-warunki.html" style="color:lime;">a2e - Dwa warunki &#10004;</a> </big></span><br />
-			<big><a href="a2f-dwa-warunki-jednej-zmiennej.html" style="color:lime;">a2f - Dwa warunki jednej zmiennej &#10004;</a> </big></span><br />     
-            </section>
-            <section class="widgets">
-            </section>
-
-            <footer class="footer"><big>            2021 - Goodmatinf</big>
-			</footer>
-
-
-            
-
-        </div>
+  <!-- Header -->
+  <div class="container" style="margin-top:80px" id="showcase">
+    <h1 class="jumbo text-white"><b>Python - Runda 1 (in-out, if)</b></h1>
+	<h3 class="text-white">Tutaj znajdują się rozwiązania zadań z pierwszej rundy:</h3>
+	<h4><a href="a1a-odejmowanko.html" style="color:lime;">a1a - Odejmowanko &#10004;</a></h4>
+	<h4><a href="a1a2-wawrzynosek.html" style="color:lime;">a1a2 - Wawrzynowsek &#10004;</a></h4>   
+	<h4><a href="a1b-kalkulator.html" style="color:lime;">a1b - Kalkulator &#10004;</a></h4>
+	<h4><a href="a1c-tygodnie.html" style="color:lime;">a1c - Tygodnie &#10004;</a></h4>
+	<h4><a href="a1d-kalkulatorIII.html" style="color:lime;">a1d - Kalkulator III &#10004;</a></h4>
+	<h4><a href="a2a-wiekszy.html" style="color:lime;">a2a - Wiekszy &#10004;</a></h4>
+	<h4><a href="a2b-minimum.html" style="color:lime;">a2b - Minimum &#10004;</a></h4>
+	<h4><a href="a2c-mniejsza-odleglosc.html" style="color:lime;">a2c - Mniejsza odleglosc &#10004;</a></h4>   
+	<h4><a href="a2d-czy-calkowita.html" style="color:lime;">a2d - Czy calkowita &#10004;</a></h4>
+	<h4><a href="a2da-czy-nieparzysta.html" style="color:lime;">a2da - Czy nieparzysta &#10004;</a></h4>
+	<h4><a href="a2e-dwa-warunki.html" style="color:lime;">a2e - Dwa warunki &#10004;</a></h4>
+	<h4><a href="a2f-dwa-warunki-jednej-zmiennej.html" style="color:lime;">a2f - Dwa warunki jednej zmiennej &#10004;</a></h4>  
+  </div>
+<!-- End page content -->
 </div>
+<!-- Container -->
+<div class="dark-grey container padding-32" style="margin-top:100px;padding-right:58px"><p class="right"> 2021 - Goodmatinf</p></div>
 
-<div style="height:90px">
+<script>
+// Script to open and close sidebar
+function buz_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function buz_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
 
-</div>
-          
-    </body>
+// Modal Image Gallery
+//function onClick(element) {
+//  document.getElementById("img01").src = element.src;
+//  document.getElementById("modal01").style.display = "block";
+//  var captionText = document.getElementById("caption");
+//  captionText.innerHTML = element.alt;
+//}
+</script>
+
+</body>
 </html>
+

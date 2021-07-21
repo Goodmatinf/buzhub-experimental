@@ -6,6 +6,26 @@ article,aside,details,figcaption,figure,footer,header,main,menu,nav,section{disp
 audio,canvas,progress,video{display:inline-block}progress{vertical-align:baseline}
 audio:not([controls]){display:none;height:0}[hidden],template{display:none}
 a{background-color:transparent}a:active,a:hover{outline-width:0}
+a:link {
+  color: white;
+  background-color: transparent;
+  text-decoration: none;
+}
+a:visited {
+  color: orange;
+  background-color: transparent;
+  text-decoration: none;
+}
+a:hover {
+  color: red;
+  background-color: transparent;
+  text-decoration: underline;
+}
+a:active {
+  color: yellow;
+  background-color: transparent;
+  text-decoration: underline;
+}
 abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}
 b,strong{font-weight:bolder}dfn{font-style:italic}mark{background:#ff0;color:#000}
 small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}
@@ -190,7 +210,7 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
 .text-light-green,.hover-text-light-green:hover{color:#8bc34a!important}
 .text-indigo,.hover-text-indigo:hover{color:#3f51b5!important}
 .text-khaki,.hover-text-khaki:hover{color:#b4aa50!important}
-.text-lime,.hover-text-lime:hover{color:#cddc39!important}
+.text-lime,.hover-text-lime:hover{color:#00ff00!important}
 .text-orange,.hover-text-orange:hover{color:#ff9800!important}
 .text-deep-orange,.hover-text-deep-orange:hover{color:#ff5722!important}
 .text-pink,.hover-text-pink:hover{color:#e91e63!important}

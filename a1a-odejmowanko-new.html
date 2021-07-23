@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<title>buzhub - a2f - Dwa warunki jednej zmiennej</title>
+<title>buzhub - Hello World!</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="res/style.css">
@@ -46,7 +46,7 @@ pre code {
     <h3 class="padding-64 text-black"><b>Buzhub</b></h3>
   </div>
   <div class="bar-block">
-    <a href="index.html" onclick="buz_close()" class="bar-item button hover-white text-black">Strona Główna</a> 
+    <a href="#" onclick="buz_close()" class="bar-item button hover-white text-black">Strona Główna</a> 
     <a href="Python-zadania.html" onclick="buz_close()" class="bar-item button hover-white text-black">Python - zadania</a> 
     <a href="Python-spr.html" onclick="buz_close()" class="bar-item button hover-white text-black">Python - sprawdziany</a> 
     <a href="#" onclick="buz_close()" class="bar-item button hover-white text-black">Calc</a> 
@@ -61,33 +61,30 @@ pre code {
 </header>
 
 <!-- Overlay effect when opening sidebar on small screens -->
-<div class="overlay hide-large" onclick="buz_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div><!-- !PAGE CONTENT! -->
+<div class="overlay hide-large" onclick="buz_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
 <div class="main" style="margin-left:340px;margin-right:40px">
 
   <!-- Header -->
   <div class="container" style="margin-top:80px" id="showcase">
 	<a href="Python-Runda-1.html" style="color:white;">&ltWstecz</a>
-    <h1 class="text-white"><b>a2f - Dwa warunki jednej zmiennej</b></h1>
+    <h1 class="text-white"><b>a1a - Odejmowanko</b></h1>
     <h1 class="xxxlarge text-lime"><b>Status zadania: Pełna poprawność</b></h1>
 	<h1 class="xxxlarge text-lime"><b>Zadanie zweryfikowane przez: Goodmatinf</b></h1>
-<br>
-<br>
+<br />
+<br />
 <h4 class="text-white">Przykładowe rozwiązanie:</h4>
-<pre><code class="language-py">a=int(input())
-b=int(input())
-c=int(input())
-if a>=b and c>=a:
-	print('tak')
-else:
-	print('nie')</code></pre><br><br>
+<pre><code class="language-py">a=input()
+b=input()
+a=float(a)
+b=float(b)
+c=a-b
+print(c)</code></pre><br />
 <h4 class="text-white">Krótkie rozwiązanie:</h4>
-<pre><code class="language-py">a=int(input())
-b=int(input())
-c=int(input())
-if c>=a>=b:
-	print("tak")
-else:
-	print("nie")</code></pre><br>
+<pre><code class="language-py">a = float(input())
+b = float(input())
+print(a-b)</code></pre><br />
 <h4 class="text-white">Rozwiązanie w języku Rust:</h4>
 <pre><code class="language-rust">use std::io;
 
@@ -95,23 +92,23 @@ fn main() {
 
 let mut a = String::new();
 let mut b = String::new();
-let mut c = String::new();
 
-io::stdin().read_line(&mut a);
-io::stdin().read_line(&mut b);
-io::stdin().read_line(&mut c);
+io::stdin()
+.read_line(&mut a)
+.expect("aaaaa");
 
-let a: i32 = a.trim().parse().expect("aaa");
-let b: i32 = b.trim().parse().expect("bbb");
-let c: i32 = c.trim().parse().expect("ccc");
+io::stdin()
+.read_line(&mut b)
+.expect("bbbbb");
 
-if a>=b && a<=c {
-println!("tak");
-}
-else {
-println!("nie");
-}
-}</code></pre></div>
+let a: f64 = a.trim().parse().expect("nananan");
+let b: f64 = b.trim().parse().expect("nbnbnbn");
+
+let mut c = a - b;
+
+println!("{}", c);
+}</code></pre><br />
+  </div>
 <!-- End page content -->
 </div>
 <!-- Container -->
@@ -132,3 +129,4 @@ function buz_close() {
 
 </body>
 </html>
+

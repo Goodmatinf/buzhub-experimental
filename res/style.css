@@ -189,9 +189,9 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
 .orange,.hover-orange:hover{color:#000!important;background-color:#ff9800!important}
 .deep-orange,.hover-deep-orange:hover{color:#fff!important;background-color:#ff5722!important}
 .pink,.hover-pink:hover{color:#fff!important;background-color:#e91e63!important}
-.purple,.hover-purple:hover{color:#fff!important;background-color:#9c27b0!important}
+.purple,.hover-purple:hover{color:#fff!important;background-color:#af87ff!important}
 .deep-purple,.hover-deep-purple:hover{color:#fff!important;background-color:#673ab7!important}
-.red,.hover-red:hover{color:#fff!important;background-color:#af87ff!important}
+.red,.hover-red:hover{color:#fff!important;background-color:#ff0000!important}
 .sand,.hover-sand:hover{color:#000!important;background-color:#fdf5e6!important}
 .teal,.hover-teal:hover{color:#fff!important;background-color:#009688!important}
 .yellow,.hover-yellow:hover{color:#000!important;background-color:#ffeb3b!important}
@@ -219,9 +219,9 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
 .text-orange,.hover-text-orange:hover{color:#ff9800!important}
 .text-deep-orange,.hover-text-deep-orange:hover{color:#ff5722!important}
 .text-pink,.hover-text-pink:hover{color:#e91e63!important}
-.text-purple,.hover-text-purple:hover{color:#9c27b0!important}
+.text-purple,.hover-text-purple:hover{color:#af87ff!important}
 .text-deep-purple,.hover-text-deep-purple:hover{color:#673ab7!important}
-.text-red,.hover-text-red:hover{color:#af87ff!important}
+.text-red,.hover-text-red:hover{color:#ff0000!important}
 .text-sand,.hover-text-sand:hover{color:#fdf5e6!important}
 .text-teal,.hover-text-teal:hover{color:#009688!important}
 .text-yellow,.hover-text-yellow:hover{color:#d2be0e!important}
@@ -245,7 +245,7 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
 .border-orange,.hover-border-orange:hover{border-color:#ff9800!important}
 .border-deep-orange,.hover-border-deep-orange:hover{border-color:#ff5722!important}
 .border-pink,.hover-border-pink:hover{border-color:#e91e63!important}
-.border-purple,.hover-border-purple:hover{border-color:#9c27b0!important}
+.border-purple,.hover-border-purple:hover{border-color:#af87ff!important}
 .border-deep-purple,.hover-border-deep-purple:hover{border-color:#673ab7!important}
 .border-red,.hover-border-red:hover{border-color:#af87ff!important}
 .border-sand,.hover-border-sand:hover{border-color:#fdf5e6!important}

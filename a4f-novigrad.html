@@ -69,13 +69,12 @@ pre code {
 	<a href="Python-Runda-2.html" style="color:white;">&ltWstecz</a>
     <h1 class="text-white"><b>a4f - Novigrad - u Vivaldiego</b></h1>
     <h2 class="text-lime"><b>Status zadania: Pełna poprawność</b></h2>
-	<h2 class="text-yellow"><b>Uwagi: Możliwe krótsze rozwiązanie</b></h2>
+	<h2 class="text-lime"><b>Zadanie zweryfikowane przez: Goodmatinf</b></h2>
 <br>
 <br>
 <h4 class="text-white">Przykładowe rozwiązanie:</h4>
 <pre><code class="language-py">x = input()
 x = x.split(":")
-poz = int(0)
 m = x[0]
 m = int(m)
 z = x[1]
@@ -84,6 +83,32 @@ s = x[2]
 s = int(s)
 d = x[3]
 d = int(d)
+
+if d >= 12:
+	y = d%12
+	c = (d-y) / 12
+	s = s + c
+	d = d - 12*c
+		
+if s >= 20:
+	y = s%20
+	c = (s-y) / 20
+	z = z + c
+	s = s - 20*c
+
+if z >= 100:
+	y = z%100
+	c = (z-y) / 100
+	m = m + c
+	z = z - 100*c
+
+print(int(m), int(z), int(s), int(d), sep=":")</code></pre><br><br>
+<h4 class="text-white">Krótkie rozwiązanie:</h4>
+<pre><code class="language-py">x = input().split(":")
+m = int(x[0])
+z = int(x[1])
+s = int(x[2])
+d = int(x[3])
 
 if d > 11:
 	y = d%12
@@ -103,49 +128,44 @@ if z > 99:
 	m = m + c
 	z = z - 100*c
 
-m = int(m)
-z = int(z)
-s = int(s)
-d = int(d)
-print(m , z , s ,d , sep=":")</code></pre><br><br>
+print(int(m), int(z), int(s), int(d), sep=":")</code></pre><br>
 <h4 class="text-white">Rozwiązanie w języku Rust:</h4>
 <pre><code class="language-rust">use std::io;
 
 fn main() {
 
-let mut a = String::new();
+	let mut a = String::new();
 
-io::stdin().read_line(&mut a);
+	io::stdin().read_line(&mut a);
 
-//let mut a = a.split(":");
-let v: Vec<&str> = a.split(":").collect();
-let mut m: i32 = v[0].trim().parse().expect("mmm");
-let mut z: i32 = v[1].trim().parse().expect("zzz");
-let mut s: i32 = v[2].trim().parse().expect("sss");
-let mut d: i32 = v[3].trim().parse().expect("ddd");
+	let v: Vec<&str> = a.split(":").collect();
+	let mut m: i32 = v[0].trim().parse().expect("mmm");
+	let mut z: i32 = v[1].trim().parse().expect("zzz");
+	let mut s: i32 = v[2].trim().parse().expect("sss");
+	let mut d: i32 = v[3].trim().parse().expect("ddd");
 
-if d > 11 {
-let mut y = d%12;
-let mut c = (d-y) / 12;
-s += c;
-d -= 12*c;
-}
+	if d > 11 {
+		let mut y = d%12;
+		let mut c = (d-y) / 12;
+		s += c;
+		d -= 12*c;
+	}
 
-if s > 19 {
-let mut y = s%20;
-let mut c = (s-y) / 20;
-z += c;
-s -= 20*c;
-}
+	if s > 19 {
+		let mut y = s%20;
+		let mut c = (s-y) / 20;
+		z += c;
+		s -= 20*c;
+	}
 
-if z > 99 {
-let mut y = z%100;
-let mut c = (z-y) / 100;
-m += c;
-z -= 100*c;
-}
+	if z > 99 {
+		let mut y = z%100;
+		let mut c = (z-y) / 100;
+		m += c;
+		z -= 100*c;
+	}
 
-println!("{}:{}:{}:{}", m, z, s, d);
+	println!("{}:{}:{}:{}", m, z, s, d);
 }</code></pre></div>
 <!-- End page content -->
 </div>

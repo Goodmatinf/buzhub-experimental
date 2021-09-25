@@ -69,27 +69,17 @@ pre code {
 	<a href="Python-Runda-2.html" style="color:white;">&ltWstecz</a>
     <h1 class="text-white"><b>a4e - Ostrorog - Skup ryb</b></h1>
     <h2 class="text-lime"><b>Status zadania: Pełna poprawność</b></h2>
-	<h2 class="text-yellow"><b>Uwagi: Możliwe krótsze rozwiązanie</b></h2>
+	<h2 class="text-lime"><b>Zadanie zweryfikowane przez: Goodmatinf</b></h2>
 <br>
 <br>
 <h4 class="text-white">Przykładowe rozwiązanie:</h4>
-<pre><code class="language-py">txt = input()
-x = txt.replace("szczupak " , "")
-x = x.split(":")
-cena = int(0)
-poz = int(0)
+<pre><code class="language-py">x = input().replace("szczupak " , "").split(":")
+cena = 0
 
-for i in x:
-	poz+=1
-	i = int(i)
-	if poz==1:
-		cena=cena+100*20*12*i
-	elif poz==2:
-		cena=cena+20*12*i
-	elif poz==3:
-		cena=cena+12*i
-	elif poz==4:
-		cena=cena+i
+cena=cena+100*20*12*int(x[0])
+cena=cena+20*12*int(x[1])
+cena=cena+12*int(x[2])
+cena=cena+int(x[3])
 
 print(cena)</code></pre><br><br>
 <h4 class="text-white">Rozwiązanie w języku Rust:</h4>
@@ -97,32 +87,24 @@ print(cena)</code></pre><br><br>
 
 fn main() {
 
-let mut a = String::new();
+	let mut a = String::new();
 
-io::stdin().read_line(&mut a);
+	io::stdin().read_line(&mut a);
+	a = a.replace("szczupak ", "");
 
-a = a.replace("szczupak ", "");
-let mut a = a.split(":");
-let mut cena = 0;
-let mut pos = 0;
+	let v: Vec<&str> = a.split(":").collect();
+	let m: i32 = v[0].trim().parse().expect("mmm");
+	let z: i32 = v[1].trim().parse().expect("zzz");
+	let s: i32 = v[2].trim().parse().expect("sss");
+	let d: i32 = v[3].trim().parse().expect("ddd");
+	let mut cena: i32 = 0;
 
-for i in a {
-pos += 1;
-let j: i32 = i.trim().parse().expect("jjj");
-if pos == 1 {
-cena = cena + 100*20*12*j;
-}
-else if pos == 2 {
-cena = cena + 20*12*j;
-}
-else if pos == 3 {
-cena = cena + 12*j;
-}
-else if pos == 4 {
-cena = cena + j;
-}
-}
-println!("{}", cena);
+	cena=cena+100*20*12*m;
+	cena=cena+20*12*z;
+	cena=cena+12*s;
+	cena=cena+d;
+
+	println!("{}", cena);
 }</code></pre></div>
 <!-- End page content -->
 </div>

@@ -69,18 +69,23 @@ pre code {
 	<a href="Python-Runda-3.html" style="color:white;">&ltWstecz</a>
     <h1 class="text-white"><b>a5c - Kwadrat z x-ow</b></h1>
     <h2 class="text-lime"><b>Status zadania: Pełna poprawność</b></h2>
-	<h2 class="text-yellow"><b>Uwagi: Możliwe krótsze rozwiązanie</b></h2>
+	<h2 class="text-lime"><b>Zadanie zweryfikowane przez: Bluemoon</b></h2>
 <br>
 <br>
 <h4 class="text-white">Przykładowe rozwiązanie:</h4>
-<pre><code class="language-py">a = input()
-a = int(a)
-przed = ""
+<pre><code class="language-py">a = int(input())
+ppp = ""
 for i in range(a):
 	for j in range(a):
-		przed = przed + "x"
-	print(przed)
-	przed = str("")</code></pre><br><br>
+		ppp = ppp + "x"
+	print(ppp)
+	ppp = str("")</code></pre><br><br>
+<h4 class="text-white">Krótkie rozwiązanie:</h4>
+<pre><code class="language-py">n=int(input())
+for i in range(n):
+	for j in range(n):
+		print("x", end="")
+	print()</code></pre><br>
 <h4 class="text-white">Rozwiązanie w języku Rust:</h4>
 <pre><code class="language-rust">use std::io;
 

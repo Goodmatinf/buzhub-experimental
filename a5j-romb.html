@@ -69,7 +69,7 @@ pre code {
 	<a href="Python-Runda-3.html" style="color:white;">&ltWstecz</a>
     <h1 class="text-white"><b>a5j - Romb</b></h1>
     <h2 class="text-lime"><b>Status zadania: Pełna poprawność</b></h2>
-	<h2 class="text-yellow"><b>Uwagi: Możliwe krótsze rozwiązanie</b></h2>
+	<h2 class="text-lime"><b>Zadanie zweryfikowane przez: Bluemoon</b></h2>
 <br>
 <br>
 <h4 class="text-white">Przykładowe rozwiązanie:</h4>
@@ -103,6 +103,24 @@ for i in range(a):
 	przed = str("")
 	z -= 2
 	d += 1</code></pre><br><br>
+<h4 class="text-white">Krótkie rozwiązanie:</h4>
+<pre><code class="language-py">n=int(input())
+for j in range(n):
+	for i in range(n-j-1):
+		print('.', end='')
+	for i in range(2*j+1):
+		print('x', end='')
+	for i in range(n-j-1):
+		print('.', end='')
+	print()
+for j in range(n-1):
+	for i in range(j+1):
+		print('.', end='')
+	for i in range(2*n-2*(j+1)-1):
+		print('x', end='')
+	for i in range(j+1):
+		print('.', end='')
+	print()</code></pre><br>
 <h4 class="text-white">Rozwiązanie w języku Rust:</h4>
 <pre><code class="language-rust">use std::io;
 

@@ -69,7 +69,7 @@ pre code {
 	<a href="Python-Runda-3.html" style="color:white;">&ltWstecz</a>
     <h1 class="text-white"><b>a5g - Choina z cyferek</b></h1>
     <h2 class="text-lime"><b>Status zadania: Pełna poprawność</b></h2>
-	<h2 class="text-yellow"><b>Uwagi: Możliwe krótsze rozwiązanie</b></h2>
+	<h2 class="text-lime"><b>Zadanie zweryfikowane przez: Bluemoon</b></h2>
 <br>
 <br>
 <h4 class="text-white">Przykładowe rozwiązanie:</h4>
@@ -93,6 +93,13 @@ for h in range(a):
 	c = c + 1
 	d = str(c)
 	d = d[-1:]</code></pre><br><br>
+<h4 class="text-white">Krótkie rozwiązanie:</h4>
+<pre><code class="language-py">n=int(input())
+for i in range(n):
+	for j in range(n):
+		x=i+1
+		x=x%10
+		print(str(x)*(j+1))</code></pre><br>
 <h4 class="text-white">Rozwiązanie w języku Rust:</h4>
 <pre><code class="language-rust">use std::io;
 

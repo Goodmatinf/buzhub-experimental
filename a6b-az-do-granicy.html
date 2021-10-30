@@ -80,6 +80,19 @@ while suma <= 2000 and suma > -2000:
 	a = int(a)
 	suma = suma + a
 print(suma)</code></pre><br><br>
+<h4 class="text-white">Rozwiązanie w języku Dart:</h4>
+<pre><code class="language-dart">import 'dart:io';
+
+void main() {
+	var a = 0;
+	var s = 0;
+	
+	while (s <= 2000 && s > -2000) {
+		a = int.parse(stdin.readLineSync()!);
+		s += a;
+	}
+	print(s);
+}</code></pre><br>
 <h4 class="text-white">Rozwiązanie w języku Rust:</h4>
 <pre><code class="language-rust">use std::io;
 
@@ -93,7 +106,7 @@ fn main() {
 
 		io::stdin().read_line(&mut a).expect("aac");
 
-		let a: i32 = a.trim().parse().expect("aaa");
+		let a: i32 = a.trim().parse().expect("a");
 
 		suma += a;
 

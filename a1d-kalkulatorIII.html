@@ -88,8 +88,8 @@ let mut b = String::new();
 io::stdin().read_line(&mut a);
 io::stdin().read_line(&mut b);
 
-let a: f32 = a.trim().parse().expect("aaa");
-let b: f32 = b.trim().parse().expect("bbb");
+let a: f32 = a.trim().parse().expect("a");
+let b: f32 = b.trim().parse().expect("b");
 
 println!("{}\n {:.4} {:.2} {:.0}", a.powf(b), a.powf(1.0/b), a.powf(1.0/b), a.powf(1.0/b))
 }</code></pre></div>

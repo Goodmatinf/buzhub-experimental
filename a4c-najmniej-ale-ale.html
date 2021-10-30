@@ -84,6 +84,26 @@ for b in a:
 if c==1024:
 	c=0
 print(c)</code></pre><br><br>
+<h4 class="text-white">Rozwiązanie w języku Dart:</h4>
+<pre><code class="language-dart">import 'dart:io';
+
+void main() {
+	var a = stdin.readLineSync()!;
+	var b = 1024;
+	var c = a.split(" ");
+	c.forEach((i) {
+		var u = int.parse(i);
+		if (u>9) {
+			if (u<b) {
+				b = u;
+			}
+		};
+	});
+	if (b == 1024) {
+		b = 0;
+	}
+	print(b);
+}</code></pre><br>
 <h4 class="text-white">Rozwiązanie w języku Rust:</h4>
 <pre><code class="language-rust">use std::io;
 
@@ -97,7 +117,7 @@ let mut a = a.split(" ");
 let mut min = 1025;
 
 for i in a {
-let j: i32 = i.trim().parse().expect("jjj");
+let j: i32 = i.trim().parse().expect("j");
 if j >= 10 {
 if min > j{
 min = j;

@@ -95,6 +95,19 @@ for i in range(n):
 	print('x'*(n-i))
 for i in range(n-1):
 	print('x'*(i+2))</code></pre><br>
+<h4 class="text-white">Rozwiązanie w języku Dart:</h4>
+<pre><code class="language-dart">import 'dart:io';
+
+void main() {
+	var a = int.parse(stdin.readLineSync()!);
+	
+	for (var i = 0; i < a; i++) {
+		print("x"*(a-i));
+	}
+	for (var j = 0; j < a-1; j++) {
+		print("x"*(j+2));
+	}
+}</code></pre><br>
 <h4 class="text-white">Rozwiązanie w języku Rust:</h4>
 <pre><code class="language-rust">use std::io;
 
@@ -104,7 +117,7 @@ let mut a = String::new();
 
 io::stdin().read_line(&mut a);
 
-let a: i32 = a.trim().parse().expect("aaa");
+let a: i32 = a.trim().parse().expect("a");
 let mut c = a;
 
 let mut s = String::new();

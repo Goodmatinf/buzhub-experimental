@@ -83,6 +83,20 @@ for i in range(a,b):
 	i = str(i)
 	przed = przed + " " + i
 print(przed[1:])</code></pre><br><br>
+<h4 class="text-white">Rozwiązanie w języku Dart:</h4>
+<pre><code class="language-dart">import 'dart:io';
+
+void main() {
+	var a = int.parse(stdin.readLineSync()!);
+	var b = int.parse(stdin.readLineSync()!);
+	var c = "";
+	
+	for (var i = a; i <= b; i++) {
+		c += i.toString() + " ";
+	}
+	
+	print(c);
+}</code></pre><br>
 <h4 class="text-white">Rozwiązanie w języku Rust:</h4>
 <pre><code class="language-rust">use std::io;
 
@@ -94,8 +108,8 @@ let mut b = String::new();
 io::stdin().read_line(&mut a);
 io::stdin().read_line(&mut b);
 
-let a: i32 = a.trim().parse().expect("aaa");
-let b: i32 = b.trim().parse().expect("bbb");
+let a: i32 = a.trim().parse().expect("a");
+let b: i32 = b.trim().parse().expect("b");
 
 let mut s =  String::new();
 

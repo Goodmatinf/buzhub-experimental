@@ -82,6 +82,20 @@ while iloczyn<=1000000000:
 	suma += 1
 suma -= 1
 print(suma)</code></pre><br><br>
+<h4 class="text-white">Rozwiązanie w języku Dart:</h4>
+<pre><code class="language-dart">import 'dart:io';
+
+void main() {
+	var a = int.parse(stdin.readLineSync()!);
+	var i = a;
+	var s = 0;
+	
+	while (i <= 1000000000) {
+		i = i * a - 2;
+		s += 1;
+	}
+	print(s-1);
+}</code></pre><br>
 <h4 class="text-white">Rozwiązanie w języku Rust:</h4>
 <pre><code class="language-rust">use std::io;
 
@@ -90,7 +104,7 @@ fn main() {
 
 	io::stdin().read_line(&mut a).expect("aac");
 
-	let a: i128 = a.trim().parse().expect("aaa");
+	let a: i128 = a.trim().parse().expect("a");
 
 	let mut iloczyn = a;
 

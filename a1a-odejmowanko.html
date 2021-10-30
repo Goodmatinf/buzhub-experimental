@@ -83,6 +83,14 @@ print(c)</code></pre><br><br>
 <pre><code class="language-py">a = float(input())
 b = float(input())
 print(a-b)</code></pre><br>
+<h4 class="text-white">Rozwiązanie w języku Dart:</h4>
+<pre><code class="language-dart">import 'dart:io';
+
+void main() {
+	double? a = double.parse(stdin.readLineSync()!);
+	double? b = double.parse(stdin.readLineSync()!);
+	print(a-b);
+}</code></pre><br>
 <h4 class="text-white">Rozwiązanie w języku Rust:</h4>
 <pre><code class="language-rust">use std::io;
 
@@ -93,11 +101,11 @@ let mut b = String::new();
 
 io::stdin()
 .read_line(&mut a)
-.expect("aaaaa");
+.expect("aaa");
 
 io::stdin()
 .read_line(&mut b)
-.expect("bbbbb");
+.expect("bbb");
 
 let a: f64 = a.trim().parse().expect("nananan");
 let b: f64 = b.trim().parse().expect("nbnbnbn");

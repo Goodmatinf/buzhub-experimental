@@ -129,6 +129,38 @@ if z > 99:
 	z = z - 100*c
 
 print(int(m), int(z), int(s), int(d), sep=":")</code></pre><br>
+<h4 class="text-white">Rozwiązanie w języku Dart:</h4>
+<pre><code class="language-dart">import 'dart:io';
+
+void main() {
+	var a = stdin.readLineSync()!.split(":");
+	var m = int.parse(a[0]);
+	var z = int.parse(a[1]);
+	var s = int.parse(a[2]);
+	var d = int.parse(a[3]);
+	var y = 0;
+	var c = 0;
+	
+	if (d > 11) {
+		y = d%12;
+		c = (d-y) ~/ 12;
+		s = s + c;
+		d = d - 12*c;
+	}
+	if (s > 19) {
+		y = s % 20;
+		c = (s - y) ~/ 20;
+		z = z + c;
+		s = s - 20*c;
+	}
+	if (z > 99) {
+		y = z % 100;
+		c = (z-y) ~/ 100;
+		m = m + c;
+		z = z - 100*c;
+	}
+	print("${m}:${z}:${s}:${d}");
+}</code></pre><br>
 <h4 class="text-white">Rozwiązanie w języku Rust:</h4>
 <pre><code class="language-rust">use std::io;
 
@@ -139,10 +171,10 @@ fn main() {
 	io::stdin().read_line(&mut a);
 
 	let v: Vec<&str> = a.split(":").collect();
-	let mut m: i32 = v[0].trim().parse().expect("mmm");
-	let mut z: i32 = v[1].trim().parse().expect("zzz");
-	let mut s: i32 = v[2].trim().parse().expect("sss");
-	let mut d: i32 = v[3].trim().parse().expect("ddd");
+	let mut m: i32 = v[0].trim().parse().expect("m");
+	let mut z: i32 = v[1].trim().parse().expect("z");
+	let mut s: i32 = v[2].trim().parse().expect("s");
+	let mut d: i32 = v[3].trim().parse().expect("d");
 
 	if d > 11 {
 		let mut y = d%12;

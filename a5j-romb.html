@@ -121,6 +121,41 @@ for j in range(n-1):
 	for i in range(j+1):
 		print('.', end='')
 	print()</code></pre><br>
+<h4 class="text-white">Rozwiązanie w języku Dart:</h4>
+<pre><code class="language-dart">import 'dart:io';
+
+void main() {
+	var a = int.parse(stdin.readLineSync()!);
+	var c = "";
+	
+	for (var j = 0; j < a; j++) {
+		c = "";
+		for (var i = 0; i < a-j-1; i++) {
+			c += ".";
+		}
+		for (var i = 0; i < 2*j+1; i++) {
+			c += "x";
+		}
+		for (var i = 0; i < a-j-1; i++) {
+			c += ".";
+		}
+		print(c);
+	}
+	for (var j = 0; j < a-1; j++) {
+                c = "";
+                for (var i = 0; i < j+1; i++) {
+                        c += ".";
+                }
+                for (var i = 0; i < 2*a-2*(j+1)-1; i++) {
+                        c += "x";
+                }
+                for (var i = 0; i < j+1; i++) {
+                        c += ".";
+                }
+                print(c);
+        }
+
+}</code></pre><br>
 <h4 class="text-white">Rozwiązanie w języku Rust:</h4>
 <pre><code class="language-rust">use std::io;
 
@@ -130,7 +165,7 @@ fn main() {
 
 	io::stdin().read_line(&mut a).expect("aac");
 
-	let a: i32 = a.trim().parse().expect("aaa");
+	let a: i32 = a.trim().parse().expect("a");
 
 	let mut s = String::new();
 

@@ -80,6 +80,19 @@ while (not a==0):
 	a = input()
 	a = int(a)
 print(suma)</code></pre><br><br>
+<h4 class="text-white">Rozwiązanie w języku Dart:</h4>
+<pre><code class="language-dart">import 'dart:io';
+
+void main() {
+	var a = 1025;
+	var s = -1025;
+	
+	while (a!=0) {
+		s += a;
+		a = int.parse(stdin.readLineSync()!);
+	}
+	print(s);
+}</code></pre><br>
 <h4 class="text-white">Rozwiązanie w języku Rust:</h4>
 <pre><code class="language-rust">use std::io;
 
@@ -93,7 +106,7 @@ fn main() {
 
 		io::stdin().read_line(&mut a).expect("aac");
 
-		let a: i32 = a.trim().parse().expect("aaa");
+		let a: i32 = a.trim().parse().expect("a");
 
 		if a == 0 {
 			break;

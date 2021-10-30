@@ -85,6 +85,18 @@ if a%2==0:
 	print("nie")
 else:
 	print("tak")</code></pre><br>
+<h4 class="text-white">Rozwiązanie w języku Dart:</h4>
+<pre><code class="language-dart">import 'dart:io';
+
+void main() {
+	int? a = int.parse(stdin.readLineSync()!);
+	if (a%2==0) {
+		print("nie");
+	}
+	else {
+		print("tak");
+	}
+}</code></pre><br>
 <h4 class="text-white">Rozwiązanie w języku Rust:</h4>
 <pre><code class="language-rust">use std::io;
 
@@ -94,7 +106,7 @@ let mut a = String::new();
 
 io::stdin().read_line(&mut a);
 
-let a: i32 = a.trim().parse().expect("aaa");
+let a: i32 = a.trim().parse().expect("a");
 
 if a%2>0 {
 println!("tak");

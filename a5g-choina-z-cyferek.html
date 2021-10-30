@@ -100,6 +100,21 @@ for i in range(n):
 		x=i+1
 		x=x%10
 		print(str(x)*(j+1))</code></pre><br>
+<h4 class="text-white">Rozwiązanie w języku Dart:</h4>
+<pre><code class="language-dart">import 'dart:io';
+
+void main() {
+	var a = int.parse(stdin.readLineSync()!);
+	var x = 0;
+	
+	for (var i = 0; i < a; i++) {
+		for (var j = 0; j < a; j++) {
+			x = i+1;
+			x = x % 10;
+			print(x.toString()*(j+1));
+		}
+	}
+}</code></pre><br>
 <h4 class="text-white">Rozwiązanie w języku Rust:</h4>
 <pre><code class="language-rust">use std::io;
 
@@ -109,7 +124,7 @@ let mut a = String::new();
 
 io::stdin().read_line(&mut a).expect("aac");
 
-let a: i32 = a.trim().parse().expect("aaa");
+let a: i32 = a.trim().parse().expect("a");
 let mut b = 1;
 let mut c = 1;
 let mut e = 1;

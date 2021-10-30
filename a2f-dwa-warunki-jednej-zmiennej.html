@@ -88,6 +88,20 @@ if c>=a>=b:
 	print("tak")
 else:
 	print("nie")</code></pre><br>
+<h4 class="text-white">Rozwiązanie w języku Dart:</h4>
+<pre><code class="language-dart">import 'dart:io';
+
+void main() {
+	int? a = int.parse(stdin.readLineSync()!);
+	int? b = int.parse(stdin.readLineSync()!);
+	int? c = int.parse(stdin.readLineSync()!);
+	if (c>=a && a>=b) {
+		print("tak");
+	}
+	else {
+		print("nie");
+	}
+}</code></pre><br>
 <h4 class="text-white">Rozwiązanie w języku Rust:</h4>
 <pre><code class="language-rust">use std::io;
 
@@ -101,9 +115,9 @@ io::stdin().read_line(&mut a);
 io::stdin().read_line(&mut b);
 io::stdin().read_line(&mut c);
 
-let a: i32 = a.trim().parse().expect("aaa");
-let b: i32 = b.trim().parse().expect("bbb");
-let c: i32 = c.trim().parse().expect("ccc");
+let a: i32 = a.trim().parse().expect("a");
+let b: i32 = b.trim().parse().expect("b");
+let c: i32 = c.trim().parse().expect("c");
 
 if a>=b && a<=c {
 println!("tak");
